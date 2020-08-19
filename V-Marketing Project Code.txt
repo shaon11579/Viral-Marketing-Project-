@@ -1,0 +1,34 @@
+Appendix: R code and Regression models
+
+#check missing value 
+> nrow(Nov20)
+
+
+> newdata <- na.omit(Nov20)
+> nrow(newdata)
+
+
+#Regression model_1 
+
+Regression21 <- lm(likes ~ Analytic+Clout+Authentic+Tone+affect+posemo+negemo+anger+sad , data = Nov20)
+> summary(Regression21)
+
+#Regression model_2
+
+> Regression21.1 <- lm(dislikes ~ Analytic+Clout+Authentic+Tone+affect+posemo+negemo+anger+sad , data = Nov20)
+> summary(Regression21.1)
+
+#Regression model_3
+
+> Regression21.2 <- lm( view_count ~ Analytic+Clout+Authentic+Tone+affect+posemo+negemo+anger+sad , data = Nov20)
+> summary(Regression21.2)
+
+#Regression model_4
+
+
+> Regression21.3 <- lm(comment_count ~ Analytic+Clout+Authentic+Tone+affect+posemo+negemo+anger+sad , data = Nov20)
+> summary(Regression21.3)
+
+
+
+
